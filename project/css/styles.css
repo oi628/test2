@@ -1,0 +1,182 @@
+@font-face {
+  font-family: myFont;
+  src: url("../others/Cookiemonster-gv11.ttf");
+}
+*{
+	font-family: myFont;
+	text-align: center;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+button {
+	background: black;
+	width: 250px;
+	height: 250px;
+	font-size: 25px;
+	border: 0;
+	padding: 0;
+}
+@keyframes hvr-wobble-horizontal {
+  16.65% {
+	-webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.hvr-wobble-horizontal {
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  animation-name: hvr-wobble-horizontal;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+#giftPage {
+	position: absolute;
+	background:black;
+	width: 100vw;
+	max-width:100vw;
+	height:100vh;
+	max-height: 100vh;
+	padding-top: 50px;
+}
+#giftPage>h1{
+	text-align: center;
+	color:white;
+}
+#giftImg {
+	width: 100%;
+	height: 100%;
+}
+@keyframes wish{
+    14.28%{
+        content: "happy birthday ";
+    }
+	28.56%{
+        content: "जन्मदिन मुबारक हो ";
+    }
+	42.84% {
+		content: "سالگرہ مبارک ";
+	}
+    57.12%{
+        content: "పుట్టినరోజు శుభాకాంక్షలు ";
+    }
+	71.4% {
+		content: "كل سنة وانتِ طيبة ";
+	}
+	85.68% {
+		content: "feliz cumpleaños ";
+	}
+	100% {
+		content: "생일 축하 ";
+	}
+}
+@keyframes rotate {
+	from{
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+#mainPage {
+	color: white;
+	position: absolute;
+	background: url("../images/wishB.jpg");
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	width: 100vw;
+	max-width:100vw;
+	height:100vh;
+	max-height: 100vh;
+	padding-top:50px;
+}
+
+#wishH1::before{
+	content:"hello ";
+}
+#wishH1.animation-start::before { 
+  animation: wish 30s linear infinite;
+  animation-delay:2s;
+}
+#heading{
+	height:20%;
+}
+#picDiv {
+	width:100%;
+	height:80%;
+	max-height:80%;
+	margin:0;
+}
+#picDiv>section{
+	width:80vw;
+	height:80%;
+	margin-left:auto;
+	margin-right:auto;
+	/*background: url("../images/img1.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-clip: content-box;*/
+	padding:10px;
+	border: 5px solid white;
+	border-radius: 10px;
+	position:relative;
+}
+#picDiv>section>img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	padding: 5px;
+	
+}
+@media (min-width: 768px){
+	#picDiv>section{
+		height:80%;
+		width:50%;
+		margin-left:auto;
+		margin-right:auto;
+		/*background: url("../images/img1.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 75% 25%;
+		background-clip: content-box;*/
+		padding:10px;
+		border: 5px solid white;
+		position:relative;
+	}
+}
+#picDiv>section>i {
+	position:absolute;
+	color:black;
+	bottom:-35px;
+	right:-35px;
+	background:white;
+	border-radius: 35px;
+	animation: rotate 5s linear infinite;
+}
